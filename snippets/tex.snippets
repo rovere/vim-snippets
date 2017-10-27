@@ -307,6 +307,14 @@ snippet col2 two-column environment
 			${0}
 		\\end{column}
 	\\end{columns}
+snippet mini2 two-column environment with minipage
+	\\begin{minipage}[t][${1:0.6}\\textheight][t]{0.5\\textwidth}
+		${3}
+	\\end{minipage}%
+	\\begin{minipage}[t][${2:0.6}\\textheight][t]{0.5\\textwidth}
+		${4}
+	\\end{minipage}%
+	${0}
 snippet \{ \{ \}
 	\\{ ${0} \\}
 #delimiter
