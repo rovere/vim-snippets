@@ -283,9 +283,11 @@ snippet sum \sum^{}_{}
 snippet lim \lim_{}
 	\\lim_{${1:n \\to \\infty}} ${0}
 snippet frame frame environment
+	%{{{ FRAME
 	\\begin{frame}[${1:t}]{${2:title}}
 		${0:${VISUAL}}
 	\\end{frame}
+	%}}}
 snippet block block environment
 	\\begin{block}{${1:title}}
 		${0:${VISUAL}}
@@ -321,6 +323,21 @@ snippet mini2 two-column environment with minipage
 		${4}
 	\\end{minipage}%
 	%}}
+	${0}
+snippet pbox2 two-column environment with parbox
+	\\nointerlineskip
+	\\calculatespace%
+	% REMEMBER: measures are absolute inside parbox, not relative
+	%\\setlength{\\fboxsep}{0pt}\fbox{%
+	\\parbox[c][${1:0.8}\\textheight][c]{0.5\\textwidth}{%
+		${3}
+	}%
+	%}%
+	%\\setlength{\\fboxsep}{0pt}\fbox{%
+	\\parbox[c][${2:0.8}\\textheight][c]{0.5\\textwidth}{%
+		${4}
+	}%
+	%}
 	${0}
 snippet \{ \{ \}
 	\\{ ${0} \\}
