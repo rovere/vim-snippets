@@ -39,6 +39,13 @@ snippet fig "Figure environment" b
 	\label{fig:${4/(\w+)\.\w+/$1/}}
 \end{figure}
 endsnippet
+snippet frame "Frame environment"
+	%{{{ FRAME $2
+	\\begin{frame}[${1:t}]{${2:title}}
+		${0:${VISUAL}}
+	\\end{frame}
+	%}}} END FRAME $2
+endsnippet
 
 snippet enum "Enumerate" b
 \begin{enumerate}
