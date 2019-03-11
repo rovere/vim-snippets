@@ -308,12 +308,19 @@ snippet col2 two-column environment
 		\\end{column}
 	\\end{columns}
 snippet mini2 two-column environment with minipage
+	\\nointerlineskip
+	\\calculatespace%
+	% Use 0.48 if uncommenting fbox drawing
+	%\\setlength{\\fboxsep}{0pt}\fbox{%
 	\\begin{minipage}[t][${1:0.6}\\textheight][t]{0.5\\textwidth}
 		${3}
 	\\end{minipage}%
+	%}}
+	%\\setlength{\\fboxsep}{0pt}\fbox{%
 	\\begin{minipage}[t][${2:0.6}\\textheight][t]{0.5\\textwidth}
 		${4}
 	\\end{minipage}%
+	%}}
 	${0}
 snippet \{ \{ \}
 	\\{ ${0} \\}
